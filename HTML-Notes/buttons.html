@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Learning HTML: Buttons</title>
+</head>
+<body>
+    <h1>Learning HTML: Buttons & some JS</h1>
+
+    <h3 id ="1">Welcome to buttons!</h3>
+
+    <button onclick="doSomething()">Click me</button>
+
+    <script>
+        var flag = true;
+        function doSomething() {
+            
+            if(flag){
+                document.getElementById("1").innerHTML = "You clicked the button!";
+                flag = false;
+            } else {
+                document.getElementById("1").innerHTML = "Welcome to buttons!";
+                flag = true;
+            }
+        }
+    </script>
+
+
+<br><br>
+<a href="index.html"><button>Back to home</button></a>
+    
+
+
+</body>
+</html>
