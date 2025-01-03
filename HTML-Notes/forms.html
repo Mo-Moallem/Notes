@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <title>Learning HTML: Forms</title>
+</head>
+<body>
+
+    <h1>Learning HTML: Forms</h1>
+
+    <!--we need a dynamic language to send the data to (e.g., php)-->
+    <!--method= methods:-->
+    <!--GET: append the data to the url of ur page (insecure)-->
+    <!--POST: submit to the server-->
+    <form action="action_page.php" method="GET">
+        <div>
+            <!--it is good practice to add (for) and (id) to link the label with the input e.g.("fname")-->
+            <label for="fname">First Name:</label> 
+            <!--name: the name of data when it is submited.
+            In this example it is also "fname".-->
+            <input type="text" id="fname" placeholder="Mohammed" name="fname" required> 
+        </div>
+        <br>
+
+        <div>
+            <label for="lname">Last Name:</label> 
+            <input type="text" id="lname" placeholder="Moallem" name="lname" required> 
+        </div>
+        <br>
+
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" max="12" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="sample@email.com" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="bdate">Birth date</label>
+            <input type="date" id="bdate" name="bdate" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="quantity">Quantity</label>
+            <!--value= defult value-->
+            <input type="number" id="quantity" name="quantity" min="1" max="99" value="1" required>
+        </div>
+        <br>
+
+        <div>
+            <!--in order to make all radio buttons in the same group 
+            we should give them the same name-->
+
+            <label for="title">Tilte:</label>
+
+            <input type ="radio" id="Mr." name="title" value="Mr." checked>
+            <label for="Mr.">Mr.</label>
+
+            <input type ="radio" id="Mrs." name="title"  value="Mrs.">
+            <label for="Mrs.">Mrs.</label>
+
+            <input type ="radio" id="PhD." name="title" value="PhD.">
+            <label for="PhD.">PhD.</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="payment" type="dropdown" >Payment: </label>
+            <select id="payment" name="payment" required>
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+                <option value="kidneys">kidneys</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="Items">Items:</label>
+
+            
+            <input type="checkbox" id="MacBook" name="Items" value="MacBook">
+            <label for = "MacBook">MacBook</label>
+            <!--the space in the value is returned in the url as "+" sign e.g. Mini+Mac-->
+            <input type="checkbox" id="Mini Mac" name="Items" value="Mini Mac">
+            <label for = "Mini Mac">Mini Mac</label>
+
+            <input type="checkbox" id="iMac" name="Items" value="iMac">
+            <label for = "iMac">iMac</label>
+
+        </div>
+        <br>
+
+        <div>
+            <input type="reset">
+        </div>
+        <br>
+        
+        <div>
+            <input type="submit"><!--in order to send our data go to line 7-->
+        </div>
+        <br>
+
+        <!--in order to leave the page even when there are some mandatory fields that are not filled 
+        is by using onclick instead of a normal hyperlink-->
+        <button type="button" onclick="location.href='index.html'">back to home</button>
+
+    </form>
+
+</body>
+</html>
